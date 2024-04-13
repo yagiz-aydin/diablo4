@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Alegreya Sans";
+  src: local("Alegreya Sans"),
+    url("./fonts/AlegreyaSans-Medium.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Exocet Blizzard OT";
+  src: local("Exocet Blizzard OT"),
+    url("./fonts/ExocetBlizzardOT-Medium.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Old Fenris";
+  src: local("Old Fenris"),
+    url("./fonts/OldFenris-Regular.otf") format("truetype");
+  font-weight: bold;
+}
+
+:root {
+  --font-default: "Alegreya Sans", sans-serif;
+  --font-default-weight: 500;
+  --font-default-scale: 1.1;
+  --font-accent: "Old Fenris", serif;
+  --font-accent-b: "Exocet Blizzard OT";
+  --font-accent-scale: 0.9;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  --fs-100: 12px;
+  --fs-200: 14px;
+  --fs-300: 16px;
+  --fs-400: 18px;
+  --fs-500: 20px;
+  --fs-600: 24px;
+  --fs-700: 36px;
+  --fs-800: 48px;
+  --fs-900: 60px;
+
+  --heading-default: #d2c8ae;
+  --text-default: #878582;
+  --btn-text-default: #e5e0c8;
+}
+
+body, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
