@@ -10,6 +10,8 @@ import {
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 import { useEffect, useState } from "react";
+import { Classes } from "../ClassesSection";
+import IconButton from "../../components/IconButton";
 
 type TypographyFontSize =
   | "12px"
@@ -58,6 +60,18 @@ const PlaygroundPreview = () => {
       `<Typography.Leading \n  fontSize="${typography2FontSize}" \n  light="${typography2Light}">Leading\n</Typography.Leading>`
     );
   }, [typography2FontSize, typography2Light]);
+
+
+  // Icon Button Props
+  const [iconButtonCode, setIconButtonCode] = useState<string>("");
+  const [classActive,setClassActive] = useState<boolean>(false);
+  const [selectedClass, setSelectedClass] = useState<Classes>("BARBARIAN");
+
+  useEffect(() => {
+    setIconButtonCode(
+      `<IconButton \n  text="${selectedClass}" \n  selected={${classActive}} \n  onClick={changeClass}/>`
+    );
+  }, [selectedClass, classActive]);
 
   return (
     <Content>
@@ -140,6 +154,47 @@ const PlaygroundPreview = () => {
           >
             Button
           </Button>
+        </Column>
+      </BodyContent>
+      <BodyContent>
+      <ColumnProps>
+          <Typography.Text fontSize="64px" light="true">
+            Change Class
+          </Typography.Text>
+          <select
+            name="class"
+            onChange={(event) =>
+              setSelectedClass(event.target.value as Classes)
+            }
+          >
+            <option value="BARBARIAN" selected>BARBARIAN</option>
+            <option value="DRUID">DRUID</option>
+            <option value="SORCERER">SORCERER</option>
+            <option value="NECROMANCER">NECROMANCER</option>
+            <option value="ROGUE">ROGUE</option>
+          </select>
+          <Typography.Text fontSize="64px" light="true">
+            Active Effect
+          </Typography.Text>
+          <input
+            type="checkbox"
+            name="classActive"
+            onChange={() => setClassActive(!classActive)}
+            checked={classActive}
+          />
+        </ColumnProps>
+        <Column>
+          <CodeMirror
+            theme="dark"
+            value={iconButtonCode}
+            height="100px"
+            width="320px"
+            editable={false}
+            extensions={[javascript({ jsx: true })]}
+          />
+        </Column>
+        <Column>
+          <IconButton text={selectedClass} selected={classActive} onClick={() => setClassActive(prevState => !prevState)}/>
         </Column>
       </BodyContent>
       <BodyContent>

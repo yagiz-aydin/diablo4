@@ -35,3 +35,8 @@ export const Column = styled.div`
     flex-direction: column;
     gap: 28px;
 `
+
+export const Row = styled.div`
+    display: flex;
+    gap: 32px;
+`

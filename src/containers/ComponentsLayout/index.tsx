@@ -1,5 +1,6 @@
 import { Button, Typography } from "../../components";
-import { HeadContent, BodyContent, Content, Column } from "./styled";
+import IconButton from "../../components/IconButton";
+import { HeadContent, BodyContent, Content, Column, Row } from "./styled";
 
 const ComponentsLayout = () => (
   <Content>
@@ -53,6 +54,18 @@ const ComponentsLayout = () => (
     </BodyContent>
     <BodyContent>
       <Column>
+      <Typography.Heading fontSize="28px" light="true">
+          Icon Button
+        </Typography.Heading>
+        <Row>
+          <IconButton text="BARBARIAN" currentClass={"BARBARIAN"} onClick={() => {}}/>
+          <IconButton text="NECROMANCER" currentClass={"BARBARIAN"} onClick={() => {}}/>
+          <IconButton text="SORCERER" currentClass={"BARBARIAN"} onClick={() => {}}/>
+          <IconButton text="DRUID" currentClass={"BARBARIAN"} onClick={() => {}}/>
+          <IconButton text="ROGUE" currentClass={"BARBARIAN"} onClick={() => {}}/>
+        </Row>
+      </Column>
+      <Column>
         <Typography.Heading fontSize="28px" light="true">
           Typography Old Fenris
         </Typography.Heading>
@@ -93,6 +106,14 @@ const ComponentsLayout = () => (
           In the railed-off sanctum in one corner of the control room a bell
           tinkled.
         </Typography.Leading>
+      </Column>
+      <Column>
+      <Typography.Heading fontSize="28px" light="true">
+          Typography Alegreya Sans
+        </Typography.Heading>
+        <Typography.Text>
+          Typography Exocet Blizzard Apparently motionless to her passengers and crew, the Interplanetary liner Hyperion bored serenely onward through space at normal acceleration.In the railed-off sanctum in one corner of the control room a bell tinkled.
+        </Typography.Text>
       </Column>
     </BodyContent>
   </Content>
