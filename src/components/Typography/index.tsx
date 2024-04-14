@@ -1,3 +1,3 @@
-import { Heading, Text } from "./styled";
+import { Heading, Text, Leading } from "./styled";
 
-export default { Heading, Text };
+export default { Heading, Text, Leading };

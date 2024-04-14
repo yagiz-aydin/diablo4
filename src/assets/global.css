@@ -17,6 +17,10 @@
   font-weight: bold;
 }
 
+* {
+  margin: 0;
+}
+
 :root {
   --font-default: "Alegreya Sans", sans-serif;
   --font-default-weight: 500;
@@ -24,6 +28,8 @@
   --font-accent: "Old Fenris", serif;
   --font-accent-b: "Exocet Blizzard OT";
   --font-accent-scale: 0.9;
+
+  --container-width: 68.75rem;
 
   --fw-400: 400;
   --fw-500: 500;
@@ -46,6 +52,13 @@
   --btn-text-default: #e5e0c8;
 }
 
-body, h1, h2, h3, h4, h5, h6{
-  margin: 0;
+@media only screen and (max-width: 1200px) {
+  :root {
+    --container-width: 34.375rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  :root {
+    --container-width: 17.1725rem;
+  }
 }
