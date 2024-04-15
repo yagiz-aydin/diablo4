@@ -21,6 +21,10 @@
   margin: 0;
 }
 
+html{
+  background-color: black;
+}
+
 :root {
   --font-default: "Alegreya Sans", sans-serif;
   --font-default-weight: 500;
