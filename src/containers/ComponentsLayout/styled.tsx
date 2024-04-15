@@ -39,4 +39,7 @@ export const Column = styled.div`
 export const Row = styled.div`
     display: flex;
     gap: 32px;
+    @media only screen and (max-width: 800px) {
+        flex-direction: column;
+    }
 `
